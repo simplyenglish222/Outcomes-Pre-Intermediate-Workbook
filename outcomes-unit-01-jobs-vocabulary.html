@@ -1,0 +1,1302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#b94716">
+  <title>Unit 1 Jobs - Vocabulary Builder</title>
+  <style>
+    :root{
+      --orange:#bd4718;
+      --orange-dark:#8d310f;
+      --orange-soft:#fff0e6;
+      --green:#176b55;
+      --green-soft:#e9f6f0;
+      --red:#b43a3a;
+      --red-soft:#fff0f0;
+      --ink:#20332f;
+      --muted:#65736f;
+      --paper:#fffdf9;
+      --line:#e3dcd1;
+      --shadow:0 12px 34px rgba(55,39,27,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:#f3f0ea;
+      font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    }
+    button,input,select{font:inherit}
+    button,input[type="checkbox"],select{touch-action:manipulation}
+    button:focus-visible,input:focus-visible,select:focus-visible{
+      outline:3px solid rgba(189,71,24,.25);
+      outline-offset:2px;
+    }
+    .hero{
+      color:white;
+      padding:calc(25px + env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) 30px max(18px,env(safe-area-inset-left));
+      background:
+        radial-gradient(circle at 88% 12%,rgba(255,255,255,.18),transparent 29%),
+        linear-gradient(135deg,#81300f 0%,#c6501c 58%,#ef8a2f 100%);
+    }
+    .hero-inner{
+      max-width:1120px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:110px 1fr;
+      gap:20px;
+      align-items:center;
+    }
+    .unit-mark{
+      width:110px;
+      height:110px;
+      border-radius:25px;
+      display:grid;
+      place-items:center;
+      background:#213932;
+      box-shadow:var(--shadow);
+      font-size:56px;
+      font-weight:950;
+    }
+    h1{
+      margin:0 0 9px;
+      font-size:clamp(33px,7vw,64px);
+      line-height:1;
+      letter-spacing:-.035em;
+    }
+    .hero p{margin:0;max-width:800px;color:#fff8f3;font-size:17px}
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:30;
+      padding:9px max(12px,env(safe-area-inset-right)) 8px max(12px,env(safe-area-inset-left));
+      border-bottom:1px solid var(--line);
+      background:rgba(255,253,249,.96);
+      backdrop-filter:blur(12px);
+    }
+    .topbar-inner{max-width:1120px;margin:auto}
+    .progress-copy{display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:850}
+    .progress-track{height:7px;margin-top:6px;border-radius:99px;background:#e8e1d8;overflow:hidden}
+    .progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--orange),#ef922f);transition:width .25s}
+    .nav{display:flex;gap:7px;overflow-x:auto;padding:8px 0 1px;scrollbar-width:none}
+    .nav::-webkit-scrollbar{display:none}
+    .nav a{
+      flex:0 0 auto;
+      min-height:36px;
+      padding:7px 12px;
+      border:1px solid #ddd3c7;
+      border-radius:999px;
+      background:white;
+      color:#4b5b56;
+      text-decoration:none;
+      font-size:12px;
+      font-weight:850;
+    }
+    main{
+      max-width:1120px;
+      margin:23px auto 110px;
+      padding:0 max(14px,env(safe-area-inset-right)) 0 max(14px,env(safe-area-inset-left));
+    }
+    .range{
+      scroll-margin-top:118px;
+      margin-bottom:26px;
+      border:1px solid var(--line);
+      border-radius:23px;
+      overflow:hidden;
+      background:var(--paper);
+      box-shadow:var(--shadow);
+    }
+    .range-head{
+      display:flex;
+      gap:15px;
+      align-items:flex-start;
+      padding:21px 23px;
+      border-bottom:1px solid #ead5c7;
+      background:linear-gradient(115deg,#f7e5d8,#fffaf6 72%);
+    }
+    .part-no{
+      flex:0 0 46px;
+      height:46px;
+      display:grid;
+      place-items:center;
+      border-radius:13px;
+      background:var(--orange);
+      color:white;
+      font-weight:950;
+    }
+    .range h2{
+      margin:0;
+      color:var(--orange-dark);
+      font-size:clamp(24px,4.8vw,36px);
+      line-height:1.08;
+    }
+    .range-head p{margin:6px 0 0;color:var(--muted)}
+    .range-body{padding:22px}
+    .panel{
+      margin:0 0 20px;
+      padding:18px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:white;
+    }
+    .panel:last-child{margin-bottom:0}
+    .panel-title{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      align-items:flex-start;
+      margin-bottom:14px;
+    }
+    .panel h3{margin:0;font-size:21px;line-height:1.25}
+    .instruction{margin:5px 0 0;color:var(--muted)}
+    .counter{
+      flex:0 0 auto;
+      padding:5px 9px;
+      border-radius:999px;
+      background:var(--orange-soft);
+      color:var(--orange-dark);
+      font-size:12px;
+      font-weight:900;
+    }
+    .toolbar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:center;
+      margin-bottom:15px;
+    }
+    .filter-btn,.mini-btn,.action-btn{
+      min-height:42px;
+      border:1px solid #d8cec2;
+      border-radius:11px;
+      padding:8px 12px;
+      background:white;
+      color:#455a53;
+      font-weight:800;
+      cursor:pointer;
+    }
+    .filter-btn.active{border-color:var(--orange);background:var(--orange-soft);color:var(--orange-dark)}
+    .mini-btn{margin-left:auto}
+    .flash-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:13px;
+    }
+    .flashcard{
+      min-width:0;
+      overflow:hidden;
+      border:1px solid #ddd3c7;
+      border-radius:16px;
+      background:#fff;
+      transition:transform .15s,border-color .15s,box-shadow .15s;
+    }
+    .flashcard:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(45,34,25,.09)}
+    .flashcard.known{border-color:#78b8a4;background:#f8fffc}
+    .card-main{
+      width:100%;
+      min-height:154px;
+      display:block;
+      padding:17px;
+      border:0;
+      background:
+        radial-gradient(circle at 90% 10%,rgba(189,71,24,.08),transparent 33%),
+        #fff;
+      color:var(--ink);
+      text-align:left;
+      cursor:pointer;
+    }
+    .flashcard.flipped .card-main{background:linear-gradient(145deg,#fff7f1,#fff)}
+    .card-label{
+      display:block;
+      margin-bottom:17px;
+      color:var(--orange);
+      font-size:11px;
+      font-weight:950;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .front-word{
+      display:block;
+      font-size:23px;
+      font-weight:900;
+      line-height:1.18;
+      overflow-wrap:anywhere;
+    }
+    .back{display:none}
+    .flipped .front{display:none}
+    .flipped .back{display:block}
+    .english{
+      display:block;
+      color:var(--orange-dark);
+      font-size:23px;
+      font-weight:950;
+      line-height:1.16;
+      overflow-wrap:anywhere;
+    }
+    .ipa{display:block;margin-top:7px;color:#546661;font-size:14px;overflow-wrap:anywhere}
+    .pos{display:block;margin-top:10px;color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;overflow-wrap:anywhere}
+    .card-footer{
+      min-height:48px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:7px;
+      padding:7px 9px;
+      border-top:1px solid #eee6dc;
+      background:#fffdfa;
+    }
+    .speak{
+      width:39px;
+      height:39px;
+      flex:0 0 39px;
+      border:0;
+      border-radius:50%;
+      background:var(--orange-soft);
+      color:var(--orange);
+      font-size:18px;
+      cursor:pointer;
+    }
+    .know-label{
+      min-height:39px;
+      display:flex;
+      align-items:center;
+      gap:7px;
+      padding:6px 9px;
+      border-radius:10px;
+      color:#445650;
+      font-size:13px;
+      font-weight:850;
+      cursor:pointer;
+    }
+    .know-label:has(input:checked){background:var(--green-soft);color:var(--green)}
+    .know-label input{width:19px;height:19px;accent-color:var(--green)}
+    .empty-state{
+      grid-column:1/-1;
+      padding:24px;
+      border:1px dashed #d7ccbe;
+      border-radius:14px;
+      color:var(--muted);
+      text-align:center;
+    }
+    .exercise{
+      margin:0 0 16px;
+      padding:17px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+    }
+    .exercise:last-child{margin-bottom:0}
+    .exercise h4{margin:0 0 5px;font-size:18px}
+    .word-bank{
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+      margin:12px 0;
+      padding:11px;
+      border-radius:12px;
+      background:#f5f1eb;
+    }
+    .word-bank span{
+      padding:5px 9px;
+      border:1px solid #ddd2c5;
+      border-radius:999px;
+      background:#fff;
+      font-size:13px;
+      font-weight:800;
+    }
+    .q-row{
+      display:grid;
+      grid-template-columns:35px minmax(0,1fr) minmax(170px,290px);
+      gap:10px;
+      align-items:center;
+      padding:10px 0;
+      border-bottom:1px dashed #e9e1d7;
+    }
+    .q-row:last-of-type{border-bottom:0}
+    .q-num{
+      width:31px;
+      height:31px;
+      display:grid;
+      place-items:center;
+      border-radius:9px;
+      background:var(--orange-soft);
+      color:var(--orange-dark);
+      font-weight:950;
+    }
+    .prompt{min-width:0}
+    .prompt strong{color:var(--orange-dark)}
+    .answer-wrap{min-width:0}
+    .answer-wrap input,.answer-wrap select{
+      width:100%;
+      min-height:44px;
+      padding:8px 10px;
+      border:1.5px solid #cec4b8;
+      border-radius:10px;
+      background:white;
+      color:var(--ink);
+      outline:0;
+    }
+    .answer-wrap.correct input,.answer-wrap.correct select{border-color:#62a98e;background:var(--green-soft)}
+    .answer-wrap.incorrect input,.answer-wrap.incorrect select{border-color:#d97d7d;background:var(--red-soft)}
+    .item-feedback{min-height:17px;margin-top:4px;font-size:12px;font-weight:850;color:var(--muted)}
+    .correct .item-feedback{color:var(--green)}
+    .incorrect .item-feedback{color:var(--red)}
+    .exercise-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .action-btn{border:0;background:var(--orange);color:white}
+    .action-btn.secondary{background:#edf1ef;color:#29453d}
+    .score{margin-left:auto;align-self:center;color:var(--muted);font-size:13px;font-weight:850}
+    .review-note{
+      margin-bottom:17px;
+      padding:14px 16px;
+      border-left:5px solid #d79420;
+      border-radius:12px;
+      background:#fff4d8;
+    }
+    .review-note p{margin:0}
+    .footer-note{
+      padding:18px;
+      color:#68746f;
+      text-align:center;
+      font-size:13px;
+    }
+    .sticky-tools{
+      position:fixed;
+      z-index:35;
+      left:50%;
+      bottom:max(10px,env(safe-area-inset-bottom));
+      transform:translateX(-50%);
+      width:min(94%,720px);
+      display:flex;
+      gap:8px;
+      justify-content:center;
+      padding:9px;
+      border-radius:17px;
+      background:rgba(31,51,47,.95);
+      box-shadow:0 13px 38px rgba(20,30,27,.30);
+      backdrop-filter:blur(12px);
+    }
+    .sticky-tools button{
+      flex:1;
+      max-width:230px;
+      min-height:43px;
+      border:0;
+      border-radius:11px;
+      background:#fff;
+      color:#28443b;
+      font-weight:900;
+      cursor:pointer;
+    }
+    .sticky-tools button.danger{background:#ffe8e3;color:#913217}
+    @media(max-width:820px){
+      .flash-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .q-row{grid-template-columns:34px 1fr}
+      .answer-wrap{grid-column:2}
+    }
+    @media(max-width:560px){
+      .hero-inner{grid-template-columns:72px 1fr;gap:14px}
+      .unit-mark{width:72px;height:72px;border-radius:19px;font-size:39px}
+      .hero p{font-size:14px}
+      .range-body{padding:13px}
+      .range-head{padding:17px 14px}
+      .part-no{flex-basis:40px;height:40px}
+      .panel,.exercise{padding:13px}
+      .panel-title{display:block}
+      .counter{display:inline-block;margin-top:8px}
+      .flash-grid{grid-template-columns:1fr}
+      .card-main{min-height:136px}
+      .q-row{grid-template-columns:31px minmax(0,1fr);gap:8px}
+      .score{width:100%;margin:2px 0 0}
+      .sticky-tools button{font-size:13px;padding:7px}
+    }
+    @media(max-width:360px){
+      main{padding-left:9px;padding-right:9px}
+      .range-body{padding:9px}
+      .panel,.exercise{padding:11px}
+      .q-row{display:block}
+      .q-num{margin-bottom:7px}
+      .answer-wrap{margin-top:8px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *{transition:none!important}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="unit-mark" aria-hidden="true">1</div>
+      <div>
+        <h1>Jobs</h1>
+        <p>Vocabulary Builder: Russian-to-English flashcards, British pronunciation, word families, collocations and interactive practice.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="progress-copy">
+        <span>Overall progress</span>
+        <span id="progressText">0%</span>
+      </div>
+      <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+      <nav class="nav" aria-label="Page ranges">
+        <a href="#range-1">Pages 8-9</a>
+        <a href="#range-2">Pages 10-11</a>
+        <a href="#range-3">Pages 12-13</a>
+        <a href="#mixed-review">Mixed Review</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="range" id="range-1">
+      <div class="range-head">
+        <div class="part-no">1</div>
+        <div>
+          <h2>Pages 8-9</h2>
+          <p>Jobs, workplaces, industries and professional activities</p>
+        </div>
+      </div>
+      <div class="range-body">
+        <div class="panel">
+          <div class="panel-title">
+            <div>
+              <h3>Flashcards</h3>
+              <p class="instruction">Read the Russian side, say the English item aloud, then tap the card to check. Every word-family form has its own card.</p>
+            </div>
+            <span class="counter" id="counter-1"></span>
+          </div>
+          <div class="toolbar" data-range-tools="1">
+            <button class="filter-btn active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="learning">Learning</button>
+            <button class="filter-btn" type="button" data-filter="known">Known</button>
+            <button class="mini-btn" type="button" data-shuffle="1">Shuffle</button>
+          </div>
+          <div class="flash-grid" id="cards-1"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title">
+            <div>
+              <h3>Exercises</h3>
+              <p class="instruction">Practise meanings, word families and collocations from this page range.</p>
+            </div>
+            <span class="counter" id="exercise-counter-1"></span>
+          </div>
+          <div id="exercises-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="range" id="range-2">
+      <div class="range-head">
+        <div class="part-no">2</div>
+        <div>
+          <h2>Pages 10-11</h2>
+          <p>Applications, time management and workplace routines</p>
+        </div>
+      </div>
+      <div class="range-body">
+        <div class="panel">
+          <div class="panel-title">
+            <div>
+              <h3>Flashcards</h3>
+              <p class="instruction">Use the checkbox only after you can produce the English item without looking.</p>
+            </div>
+            <span class="counter" id="counter-2"></span>
+          </div>
+          <div class="toolbar" data-range-tools="2">
+            <button class="filter-btn active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="learning">Learning</button>
+            <button class="filter-btn" type="button" data-filter="known">Known</button>
+            <button class="mini-btn" type="button" data-shuffle="2">Shuffle</button>
+          </div>
+          <div class="flash-grid" id="cards-2"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title">
+            <div>
+              <h3>Exercises</h3>
+              <p class="instruction">Choose or type the form required by the sentence.</p>
+            </div>
+            <span class="counter" id="exercise-counter-2"></span>
+          </div>
+          <div id="exercises-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="range" id="range-3">
+      <div class="range-head">
+        <div class="part-no">3</div>
+        <div>
+          <h2>Pages 12-13</h2>
+          <p>Job conditions, organisations, rights and social action</p>
+        </div>
+      </div>
+      <div class="range-body">
+        <div class="panel">
+          <div class="panel-title">
+            <div>
+              <h3>Flashcards</h3>
+              <p class="instruction">Notice changes in spelling and stress across each word family.</p>
+            </div>
+            <span class="counter" id="counter-3"></span>
+          </div>
+          <div class="toolbar" data-range-tools="3">
+            <button class="filter-btn active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="learning">Learning</button>
+            <button class="filter-btn" type="button" data-filter="known">Known</button>
+            <button class="mini-btn" type="button" data-shuffle="3">Shuffle</button>
+          </div>
+          <div class="flash-grid" id="cards-3"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title">
+            <div>
+              <h3>Exercises</h3>
+              <p class="instruction">Consolidate word families and workplace collocations.</p>
+            </div>
+            <span class="counter" id="exercise-counter-3"></span>
+          </div>
+          <div id="exercises-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="range" id="mixed-review">
+      <div class="range-head">
+        <div class="part-no">4</div>
+        <div>
+          <h2>Mixed Review</h2>
+          <p>Interactive version of the source exercise page</p>
+        </div>
+      </div>
+      <div class="range-body">
+        <div class="review-note">
+          <p>The seven source exercises are retained here: prepositions, word families, word-building, collocations, matching and phrasal verbs.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-title">
+            <div>
+              <h3>Exercises A-G</h3>
+              <p class="instruction">Complete all tasks, check each block, and revisit any flashcards you could not recall.</p>
+            </div>
+            <span class="counter" id="exercise-counter-4"></span>
+          </div>
+          <div id="exercises-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-note">Progress is saved automatically on this device. Pronunciation uses the English voice installed in your browser.</div>
+  </main>
+
+  <div class="sticky-tools">
+    <button type="button" id="flipVisible">Flip visible cards</button>
+    <button type="button" class="danger" id="resetAll">Reset progress</button>
+  </div>
+
+  <script>
+    const V = (en, ru, ipa, pos) => ({en, ru, ipa, pos});
+
+    const ranges = {
+      1: [
+        V("actor","актёр","/ˈæktə(r)/","noun"),
+        V("act","играть роль; выступать","/ækt/","verb - word family"),
+        V("acting","актёрская игра","/ˈæktɪŋ/","noun - word family"),
+        V("build","строить","/bɪld/","verb"),
+        V("building","здание","/ˈbɪldɪŋ/","noun - word family"),
+        V("builder","строитель","/ˈbɪldə(r)/","noun - word family"),
+        V("competitive","конкурентный; состязательный","/kəmˈpetətɪv/","adjective"),
+        V("competition","конкуренция; соревнование","/ˌkɒmpəˈtɪʃ(ə)n/","noun - word family"),
+        V("competitor","конкурент; участник соревнования","/kəmˈpetɪtə(r)/","noun - word family"),
+        V("compete","конкурировать; соревноваться","/kəmˈpiːt/","verb - word family"),
+        V("stiff competition","жёсткая конкуренция","/ˌstɪf kɒmpəˈtɪʃ(ə)n/","collocation"),
+        V("construction","строительство","/kənˈstrʌkʃ(ə)n/","noun"),
+        V("construct","сооружать; строить","/kənˈstrʌkt/","verb - word family"),
+        V("under construction","на стадии строительства","/ˌʌndə(r) kənˈstrʌkʃ(ə)n/","collocation"),
+        V("customer","покупатель; клиент","/ˈkʌstəmə(r)/","noun"),
+        V("engineer","инженер","/ˌendʒɪˈnɪə(r)/","noun"),
+        V("engineering","инженерное дело","/ˌendʒɪˈnɪərɪŋ/","noun - word family"),
+        V("get on with","ладить с","/ˌɡet ˈɒn wɪð/","phrasal verb"),
+        V("hours","рабочие часы; часы работы","/ˈaʊə(r)z/","plural noun"),
+        V("work long hours","работать подолгу","/ˌwɜː(r)k lɒŋ ˈaʊə(r)z/","collocation"),
+        V("opening hours","часы работы учреждения","/ˈəʊp(ə)nɪŋ ˌaʊə(r)z/","collocation"),
+        V("join","вступать; присоединяться","/dʒɔɪn/","verb"),
+        V("journalist","журналист","/ˈdʒɜː(r)nəlɪst/","noun"),
+        V("journalism","журналистика","/ˈdʒɜː(r)nəlɪz(ə)m/","noun - word family"),
+        V("law firm","юридическая фирма","/ˈlɔː ˌfɜː(r)m/","noun"),
+        V("lawyer","юрист; адвокат","/ˈlɔːjə(r)/","noun"),
+        V("manager","руководитель; менеджер","/ˈmænɪdʒə(r)/","noun"),
+        V("manage","руководить; управлять","/ˈmænɪdʒ/","verb - word family"),
+        V("marketing","маркетинг","/ˈmɑː(r)kɪtɪŋ/","noun"),
+        V("nurse","медсестра; медбрат","/nɜː(r)s/","noun"),
+        V("nursing","сестринское дело","/ˈnɜː(r)sɪŋ/","noun - word family"),
+        V("pilot","пилот","/ˈpaɪlət/","noun"),
+        V("politician","политик","/ˌpɒləˈtɪʃ(ə)n/","noun"),
+        V("politics","политика","/ˈpɒlətɪks/","noun - word family"),
+        V("political","политический","/pəˈlɪtɪk(ə)l/","adjective - word family"),
+        V("primary school","начальная школа","/ˈpraɪməri ˌskuːl/","noun"),
+        V("product","товар; продукт","/ˈprɒdʌkt/","noun"),
+        V("produce","производить","/prəˈdjuːs/","verb - word family"),
+        V("production","производство","/prəˈdʌkʃ(ə)n/","noun - word family"),
+        V("project","проект","/ˈprɒdʒekt/","noun"),
+        V("research","исследование","/rɪˈsɜː(r)tʃ/","noun"),
+        V("research","исследовать","/rɪˈsɜː(r)tʃ/","verb - word family"),
+        V("researcher","исследователь","/rɪˈsɜː(r)tʃə(r)/","noun - word family"),
+        V("do research into","проводить исследование по теме","/ˌduː rɪˈsɜː(r)tʃ ˌɪntuː/","collocation"),
+        V("run a company","руководить компанией","/ˌrʌn ə ˈkʌmpəni/","verb phrase"),
+        V("sales","продажи","/seɪlz/","noun"),
+        V("scientist","учёный","/ˈsaɪəntɪst/","noun"),
+        V("science","наука","/ˈsaɪəns/","noun - word family"),
+        V("scientific","научный","/ˌsaɪənˈtɪfɪk/","adjective - word family"),
+        V("soldier","солдат","/ˈsəʊldʒə(r)/","noun"),
+        V("studio","студия","/ˈstjuːdiəʊ/","noun"),
+        V("temporary","временный","/ˈtemp(ə)rəri/","adjective"),
+        V("training","обучение; подготовка","/ˈtreɪnɪŋ/","noun"),
+        V("training course","учебный курс","/ˈtreɪnɪŋ ˌkɔː(r)s/","collocation"),
+        V("work experience","опыт работы; учебная практика","/ˈwɜː(r)k ɪkˌspɪəriəns/","noun")
+      ],
+      2: [
+        V("agree","соглашаться; договариваться","/əˈɡriː/","verb"),
+        V("agreement","соглашение","/əˈɡriːmənt/","noun - word family"),
+        V("apply","подавать заявление","/əˈplaɪ/","verb"),
+        V("application","заявление; заявка","/ˌæplɪˈkeɪʃ(ə)n/","noun - word family"),
+        V("appointment","назначенная встреча; приём","/əˈpɔɪntmənt/","noun"),
+        V("make an appointment","записаться на приём","/ˌmeɪk ən əˈpɔɪntmənt/","collocation"),
+        V("keep an appointment","прийти на назначенную встречу","/ˌkiːp ən əˈpɔɪntmənt/","collocation"),
+        V("arrange","организовывать; договариваться","/əˈreɪndʒ/","verb"),
+        V("attend","посещать; присутствовать","/əˈtend/","verb"),
+        V("balance","баланс; равновесие","/ˈbæləns/","noun"),
+        V("balance","совмещать; уравновешивать","/ˈbæləns/","verb - word family"),
+        V("balanced","сбалансированный","/ˈbælənst/","adjective - word family"),
+        V("strike a balance","найти баланс","/ˌstraɪk ə ˈbæləns/","collocation"),
+        V("basic","основной; базовый","/ˈbeɪsɪk/","adjective"),
+        V("break","перерыв","/breɪk/","noun"),
+        V("busy","занятый; оживлённый","/ˈbɪzi/","adjective"),
+        V("contract","договор; контракт","/ˈkɒntrækt/","noun"),
+        V("sign a contract","подписать договор","/ˌsaɪn ə ˈkɒntrækt/","collocation"),
+        V("break a contract","нарушить договор","/ˌbreɪk ə ˈkɒntrækt/","collocation"),
+        V("renew a contract","продлить договор","/rɪˌnjuː ə ˈkɒntrækt/","collocation"),
+        V("delay","откладывать; задерживать","/dɪˈleɪ/","verb"),
+        V("delay","задержка","/dɪˈleɪ/","noun - word family"),
+        V("diary","ежедневник; дневник","/ˈdaɪəri/","noun"),
+        V("keep a diary","вести дневник","/ˌkiːp ə ˈdaɪəri/","collocation"),
+        V("efficient","эффективный","/ɪˈfɪʃ(ə)nt/","adjective"),
+        V("efficiently","эффективно","/ɪˈfɪʃ(ə)ntli/","adverb - word family"),
+        V("efficiency","эффективность","/ɪˈfɪʃ(ə)nsi/","noun - word family"),
+        V("employ","нанимать","/ɪmˈplɔɪ/","verb"),
+        V("employer","работодатель","/ɪmˈplɔɪə(r)/","noun - word family"),
+        V("employee","работник; сотрудник","/ˌemplɔɪˈiː/","noun - word family"),
+        V("employment","занятость; трудоустройство","/ɪmˈplɔɪmənt/","noun - word family"),
+        V("end","заканчиваться","/end/","verb"),
+        V("end","конец","/end/","noun - word family"),
+        V("ending","концовка","/ˈendɪŋ/","noun - word family"),
+        V("event","мероприятие; событие","/ɪˈvent/","noun"),
+        V("hardly","едва; почти не","/ˈhɑː(r)dli/","adverb"),
+        V("interview","собеседование; интервью","/ˈɪntə(r)ˌvjuː/","noun"),
+        V("interview","проводить собеседование","/ˈɪntə(r)ˌvjuː/","verb - word family"),
+        V("interviewer","интервьюер","/ˈɪntə(r)ˌvjuːə(r)/","noun - word family"),
+        V("interviewee","соискатель; интервьюируемый","/ˌɪntə(r)vjuːˈiː/","noun - word family"),
+        V("launch","запускать товар или проект","/lɔːntʃ/","verb"),
+        V("launch","запуск; презентация новинки","/lɔːntʃ/","noun - word family"),
+        V("list","список","/lɪst/","noun"),
+        V("main","главный; основной","/meɪn/","adjective"),
+        V("mainly","главным образом","/ˈmeɪnli/","adverb - word family"),
+        V("manage","рационально использовать; управлять","/ˈmænɪdʒ/","verb"),
+        V("management","управление","/ˈmænɪdʒmənt/","noun - word family"),
+        V("part-time","неполный рабочий день","/ˌpɑː(r)t ˈtaɪm/","adjective"),
+        V("part time","неполный рабочий день","/ˌpɑː(r)t ˈtaɪm/","adverb - word family"),
+        V("presentation","презентация; выступление","/ˌprez(ə)nˈteɪʃ(ə)n/","noun"),
+        V("present","представлять; презентовать","/prɪˈzent/","verb - word family"),
+        V("presenter","докладчик; ведущий","/prɪˈzentə(r)/","noun - word family"),
+        V("priority","приоритет","/praɪˈɒrəti/","noun"),
+        V("quiet","спокойный; тихий","/ˈkwaɪət/","adjective"),
+        V("relaxation","отдых; расслабление","/ˌriːlækˈseɪʃ(ə)n/","noun"),
+        V("relax","расслабляться","/rɪˈlæks/","verb - word family"),
+        V("relaxing","расслабляющий","/rɪˈlæksɪŋ/","adjective - word family"),
+        V("rush","торопиться","/rʌʃ/","verb"),
+        V("rush","спешка","/rʌʃ/","noun - word family"),
+        V("in a rush","в спешке","/ˌɪn ə ˈrʌʃ/","collocation"),
+        V("session","занятие; сессия","/ˈseʃ(ə)n/","noun"),
+        V("sign","подписывать","/saɪn/","verb"),
+        V("signature","подпись","/ˈsɪɡnətʃə(r)/","noun - word family"),
+        V("sort out","разобраться; привести в порядок","/ˌsɔː(r)t ˈaʊt/","phrasal verb"),
+        V("staff","персонал","/stɑːf/","uncountable noun"),
+        V("stay up","не ложиться спать","/ˌsteɪ ˈʌp/","phrasal verb"),
+        V("well-paid","высокооплачиваемый","/ˌwel ˈpeɪd/","adjective"),
+        V("low-paid","низкооплачиваемый","/ˌləʊ ˈpeɪd/","opposite adjective")
+      ],
+      3: [
+        V("advertisement","объявление; реклама","/ədˈvɜː(r)tɪsmənt/","noun"),
+        V("advertise","рекламировать; давать объявление","/ˈædvə(r)taɪz/","verb - word family"),
+        V("advise","советовать","/ədˈvaɪz/","verb"),
+        V("advice","совет","/ədˈvaɪs/","noun - word family"),
+        V("adviser","консультант; советник","/ədˈvaɪzə(r)/","noun - word family"),
+        V("attitude","отношение; настрой","/ˈætɪˌtjuːd/","noun"),
+        V("build a nation","создавать государство","/ˌbɪld ə ˈneɪʃ(ə)n/","verb phrase"),
+        V("distribution","распределение; распространение","/ˌdɪstrɪˈbjuːʃ(ə)n/","noun"),
+        V("distribute","распределять; распространять","/dɪˈstrɪbjuːt/","verb - word family"),
+        V("energy","энергия","/ˈenə(r)dʒi/","noun"),
+        V("energetic","энергичный","/ˌenə(r)ˈdʒetɪk/","adjective - word family"),
+        V("exploit","эксплуатировать","/ɪkˈsplɔɪt/","verb"),
+        V("exploitation","эксплуатация","/ˌeksplɔɪˈteɪʃ(ə)n/","noun - word family"),
+        V("fight","бороться","/faɪt/","verb"),
+        V("fight","борьба","/faɪt/","noun - word family"),
+        V("fight for","бороться за","/ˈfaɪt fɔː(r)/","collocation"),
+        V("fixed","фиксированный; неизменный","/fɪkst/","adjective"),
+        V("install","устанавливать","/ɪnˈstɔːl/","verb"),
+        V("installation","установка","/ˌɪnstəˈleɪʃ(ə)n/","noun - word family"),
+        V("nation","страна; нация","/ˈneɪʃ(ə)n/","noun"),
+        V("national","национальный","/ˈnæʃ(ə)nəl/","adjective - word family"),
+        V("negotiate","вести переговоры","/nɪˈɡəʊʃieɪt/","verb"),
+        V("negotiation","переговоры","/nɪˌɡəʊʃiˈeɪʃ(ə)n/","noun - word family"),
+        V("offer","предлагать","/ˈɒfə(r)/","verb"),
+        V("offer","предложение","/ˈɒfə(r)/","noun - word family"),
+        V("organise","организовывать","/ˈɔː(r)ɡənaɪz/","verb"),
+        V("organised","организованный","/ˈɔː(r)ɡənaɪzd/","adjective - word family"),
+        V("organiser","организатор","/ˈɔː(r)ɡənaɪzə(r)/","noun - word family"),
+        V("organisation","организация; организационная работа","/ˌɔː(r)ɡənaɪˈzeɪʃ(ə)n/","noun - word family"),
+        V("pension","пенсия","/ˈpenʃ(ə)n/","noun"),
+        V("state pension","государственная пенсия","/ˌsteɪt ˈpenʃ(ə)n/","collocation"),
+        V("private pension","частная пенсия","/ˌpraɪvət ˈpenʃ(ə)n/","collocation"),
+        V("draw a pension","получать пенсию","/ˌdrɔː ə ˈpenʃ(ə)n/","collocation"),
+        V("positive","положительный; уверенный в успехе","/ˈpɒzətɪv/","adjective"),
+        V("positively","положительно","/ˈpɒzətɪvli/","adverb - word family"),
+        V("negative","отрицательный; пессимистичный","/ˈneɡətɪv/","opposite adjective"),
+        V("right","право","/raɪt/","noun"),
+        V("role","роль","/rəʊl/","noun"),
+        V("play a role","играть роль","/ˌpleɪ ə ˈrəʊl/","collocation"),
+        V("salary","заработная плата","/ˈsæləri/","noun"),
+        V("strike","забастовка","/straɪk/","noun"),
+        V("go on strike","начать забастовку","/ˌɡəʊ ɒn ˈstraɪk/","collocation"),
+        V("come out on strike","объявить забастовку","/ˌkʌm aʊt ɒn ˈstraɪk/","collocation"),
+        V("strike","бастовать","/straɪk/","verb - word family"),
+        V("striker","бастующий","/ˈstraɪkə(r)/","noun - word family"),
+        V("survive","выживать","/sə(r)ˈvaɪv/","verb"),
+        V("survival","выживание","/sə(r)ˈvaɪv(ə)l/","noun - word family"),
+        V("survivor","выживший","/sə(r)ˈvaɪvə(r)/","noun - word family"),
+        V("voluntary","добровольный; неоплачиваемый","/ˈvɒlənt(ə)ri/","adjective"),
+        V("volunteer","добровольно вызваться","/ˌvɒlənˈtɪə(r)/","verb - word family"),
+        V("volunteer","волонтёр","/ˌvɒlənˈtɪə(r)/","noun - word family"),
+        V("without","без","/wɪðˈaʊt/","preposition"),
+        V("do without","обходиться без","/ˌduː wɪðˈaʊt/","verb phrase")
+      ]
+    };
+
+    const EX = (title, instruction, items, bank = []) => ({title, instruction, items, bank});
+    const Q = (prompt, answer, options = null) => ({prompt, answer:Array.isArray(answer)?answer:[answer], options});
+
+    const exercises = {
+      1: [
+        EX("1. Meanings", "Choose the English item that matches the Russian meaning.", [
+          Q("юридическая фирма","law firm",["law firm","studio","sales"]),
+          Q("ладить с","get on with",["join","get on with","run a company"]),
+          Q("временный","temporary",["competitive","temporary","scientific"]),
+          Q("опыт работы / учебная практика","work experience",["training course","work experience","opening hours"]),
+          Q("строительство","construction",["building","engineering","construction"]),
+          Q("покупатель","customer",["competitor","customer","manager"]),
+          Q("исследователь","researcher",["researcher","journalist","scientist"]),
+          Q("сестринское дело","nursing",["acting","nursing","marketing"]),
+          Q("жёсткая конкуренция","stiff competition",["scientific research","stiff competition","sales figures"]),
+          Q("руководить компанией","run a company",["build a company","run a company","join a company"])
+        ]),
+        EX("2. Word families", "Type the correct form of the word suggested in brackets.", [
+          Q("The film became famous for its excellent ___ . (act)","acting"),
+          Q("Three new apartment ___ are being built. (build)","buildings"),
+          Q("We need a local ___ to repair the roof. (build)","builder"),
+          Q("Advertising is a highly ___ industry. (compete)","competitive"),
+          Q("The company bought its main ___ . (compete)","competitor"),
+          Q("Several firms ___ for the contract every year. (competition)",["compete"]),
+          Q("The airport is still under ___ . (construct)","construction"),
+          Q("The bridge was ___ between 2018 and 2020. (construction)","constructed"),
+          Q("She wants to study ___ at university. (engineer)","engineering"),
+          Q("Good ___ tells the truth. (journalist)","journalism"),
+          Q("The factory increased ___ last month. (produce)","production"),
+          Q("The ___ interviewed fifty people. (research)","researcher")
+        ],["acting","buildings","builder","competitive","competitor","compete","construction","constructed","engineering","journalism","production","researcher"]),
+        EX("3. Collocations", "Complete each sentence with the target word or phrase.", [
+          Q("Do you ___ the people you work with?","get on with"),
+          Q("The shop's ___ are from 8 a.m. till 8 p.m.","opening hours"),
+          Q("I have been ___ this week.","working long hours"),
+          Q("The company faces ___ from two new firms.","stiff competition"),
+          Q("The new school is still ___ .","under construction"),
+          Q("She is doing ___ why people forget things.","research into"),
+          Q("He works for a large ___ in Manchester.","law firm"),
+          Q("She went to ___ until she was eleven.","primary school"),
+          Q("I ___ with twenty employees.","run a company"),
+          Q("My brother is a ___ for a car company.","sales manager"),
+          Q("I am going on a ___ next week.","training course"),
+          Q("She is doing ___ in a law firm this summer.","work experience")
+        ],["get on with","opening hours","working long hours","stiff competition","under construction","research into","law firm","primary school","run a company","sales manager","training course","work experience"])
+      ],
+      2: [
+        EX("1. Meanings", "Choose the best English equivalent.", [
+          Q("подать заявление","apply",["attend","apply","arrange"]),
+          Q("работодатель","employer",["employee","employer","employment"]),
+          Q("соискатель на собеседовании","interviewee",["interviewer","interviewee","presenter"]),
+          Q("эффективно","efficiently",["efficient","efficiency","efficiently"]),
+          Q("приоритет","priority",["priority","session","list"]),
+          Q("не ложиться спать","stay up",["sort out","stay up","delay"]),
+          Q("привести в порядок","sort out",["sort out","stay up","manage"]),
+          Q("высокооплачиваемый","well-paid",["part-time","well-paid","busy"]),
+          Q("расслабляющий","relaxing",["relaxation","relax","relaxing"]),
+          Q("продлить договор","renew a contract",["break a contract","renew a contract","sign for a delivery"])
+        ]),
+        EX("2. Word families", "Complete the sentence with the required family member.", [
+          Q("We signed the ___ last week. (agree)","agreement"),
+          Q("Send your job ___ by email. (apply)","application"),
+          Q("The staff dealt with the problem ___ . (efficient)","efficiently"),
+          Q("The changes should improve the system's ___ . (efficient)","efficiency"),
+          Q("The hotel has more than 200 ___ . (employ)","employees"),
+          Q("Her ___ gives staff four weeks' holiday. (employ)","employer"),
+          Q("The story had a happy ___ . (end)","ending"),
+          Q("The ___ asked several difficult questions. (interview)","interviewer"),
+          Q("Every ___ should arrive on time. (interview)","interviewee"),
+          Q("Natasha is a very good ___ . (present)","presenter"),
+          Q("We had a very ___ weekend by the sea. (relax)","relaxing"),
+          Q("Her ___ was at the bottom of the letter. (sign)","signature")
+        ],["agreement","application","efficiently","efficiency","employees","employer","ending","interviewer","interviewee","presenter","relaxing","signature"]),
+        EX("3. Workplace collocations", "Type the missing target expression.", [
+          Q("Please call the doctor to ___ .","make an appointment"),
+          Q("She rang to say she could not ___ .","keep the appointment"),
+          Q("Have you ___ yet?","signed the contract"),
+          Q("The company allowed me to ___ for another year.","renew my contract"),
+          Q("She ___ during her year in France.","kept a diary"),
+          Q("I had a ___ yesterday.","job interview"),
+          Q("Passing my exams is my ___ .","main priority"),
+          Q("There is another ___ on Friday.","training session"),
+          Q("We ___ until 3 a.m. to watch the match.","stayed up"),
+          Q("I need to ___ the papers on my desk.","sort out"),
+          Q("I went to the bank during my ___ .","lunch break"),
+          Q("I did the last question ___ .","in a rush")
+        ],["make an appointment","keep the appointment","signed the contract","renew my contract","kept a diary","job interview","main priority","training session","stayed up","sort out","lunch break","in a rush"])
+      ],
+      3: [
+        EX("1. Meanings", "Choose the English item that matches the Russian meaning.", [
+          Q("совет","advice",["advise","advice","adviser"]),
+          Q("эксплуатация","exploitation",["installation","exploitation","distribution"]),
+          Q("энергичный","energetic",["positive","energetic","organised"]),
+          Q("переговоры","negotiation",["negotiation","organisation","distribution"]),
+          Q("фиксированная зарплата","fixed salary",["state pension","fixed salary","job offer"]),
+          Q("организатор","organiser",["organisation","organised","organiser"]),
+          Q("выживший","survivor",["survival","survivor","volunteer"]),
+          Q("добровольный","voluntary",["voluntary","positive","national"]),
+          Q("обходиться без","do without",["live on","do without","fight for"]),
+          Q("объявить забастовку","come out on strike",["draw a pension","come out on strike","play a role"])
+        ]),
+        EX("2. Word families", "Use the correct form of the word in brackets.", [
+          Q("They are ___ for English teachers. (advertisement)","advertising"),
+          Q("I decided to take her ___ . (advise)","advice"),
+          Q("A financial ___ can explain the pension. (advise)","adviser"),
+          Q("The company handles the ___ of electricity. (distribute)","distribution"),
+          Q("He is over seventy but still active and ___ . (energy)","energetic"),
+          Q("The government must stop the ___ of children. (exploit)","exploitation"),
+          Q("The ___ of the new system took two days. (install)","installation"),
+          Q("She entered a ___ competition. (nation)","national"),
+          Q("The workers entered into ___ with the employer. (negotiate)","negotiations"),
+          Q("There is ___ entertainment every evening. (organise)","organised"),
+          Q("The event's ___ apologised for the delay. (organise)","organiser"),
+          Q("Only one passenger ___ the crash. (survival)","survived")
+        ],["advertising","advice","adviser","distribution","energetic","exploitation","installation","national","negotiations","organised","organiser","survived"]),
+        EX("3. Collocations", "Complete each workplace or social-action phrase.", [
+          Q("The charity is ___ equal rights.","fighting for"),
+          Q("The job comes with a ___ .","fixed salary"),
+          Q("Everyone receives a ___ from the government.","state pension"),
+          Q("You can start to ___ when you are 65.","draw your pension"),
+          Q("She always has a ___ towards her exams.","positive attitude"),
+          Q("Money ___ in my decision.","played a major role"),
+          Q("Everyone has the ___ a fair trial.","right to"),
+          Q("The workers may ___ if their pay does not rise.","go on strike"),
+          Q("Two hundred workers have ___ .","come out on strike"),
+          Q("The union is ___ better conditions.","fighting for"),
+          Q("My boss ___ chance to work abroad.","offered me the"),
+          Q("We will have to ___ the car until it is fixed.","do without")
+        ],["fighting for","fixed salary","state pension","draw your pension","positive attitude","played a major role","right to","go on strike","come out on strike","fighting for","offered me the","do without"])
+      ],
+      4: [
+        EX("A. Prepositions", "Complete each sentence with the correct preposition.", [
+          Q("I am doing some research ___ why people forget things.","into"),
+          Q("Do you get on ___ your sister?","with"),
+          Q("He had an interview ___ the job of sales manager.","for"),
+          Q("She applied ___ a job at the BBC.","for"),
+          Q("She advises students ___ healthy eating.","on"),
+          Q("We negotiated a good price ___ the seller.","with")
+        ]),
+        EX("B. Choose the preposition", "Select the correct option.", [
+          Q("Everyone has the right ___ a fair trial.","to",["to","of"]),
+          Q("I saw an advertisement ___ a great job.","for",["for","to"]),
+          Q("What is your role ___ the company?","in",["on","in"]),
+          Q("They installed security cameras ___ the car park.","in",["in","at"]),
+          Q("She has a bad attitude ___ her parents.",["towards","toward"],["towards","for"]),
+          Q("What is the first item ___ the list?","on",["on","in"])
+        ]),
+        EX("C. Word families", "Complete the second expression with the correct form.", [
+          Q("stiff competition → a highly ___ industry","competitive"),
+          Q("play tennis for relaxation → a ___ weekend by the sea","relaxing"),
+          Q("give a presentation → she is a very good ___","presenter"),
+          Q("a job interview → ___ should always arrive on time","interviewees"),
+          Q("apply for a job → send in your ___ by email","application"),
+          Q("sign a letter → her ___ was on the letter","signature")
+        ],["competitive","relaxing","presenter","interviewees","application","signature"]),
+        EX("D. Word-building", "Form an adjective from the word in brackets.", [
+          Q("We need more ___ research into this topic. (science)","scientific"),
+          Q("There is ___ entertainment in the evenings. (organisation)","organised"),
+          Q("He is over seventy but still active and ___. (energy)","energetic"),
+          Q("He took part in a ___ competition. (nation)","national"),
+          Q("The country's ___ system needs to change. (politics)","political"),
+          Q("You should try to eat a ___ diet. (balance)","balanced")
+        ],["scientific","organised","energetic","national","political","balanced"]),
+        EX("E. Collocations", "Use the correct form of a verb from the box.", [
+          Q("Money ___ a major role in my decision.","played"),
+          Q("You can start to ___ your pension when you are 65.","draw"),
+          Q("Two hundred workers will ___ on strike.","come out"),
+          Q("I am going to ___ the contract tomorrow.","sign"),
+          Q("Did you ___ a diary during your year in France?","keep"),
+          Q("You need to call the doctor to ___ an appointment.","make")
+        ],["draw","sign","keep","play","make","come out"]),
+        EX("F. Jobs and workplaces", "Choose the correct ending.", [
+          Q("He is an engineer ...","at the Ford car factory.",["for The Times newspaper.","with an international airline.","in a local primary school.","at the Ford car factory.","at the local hospital.","in a city law firm."]),
+          Q("She is a journalist ...","for The Times newspaper.",["for The Times newspaper.","with an international airline.","in a local primary school.","at the Ford car factory.","at the local hospital.","in a city law firm."]),
+          Q("She is a lawyer ...","in a city law firm.",["for The Times newspaper.","with an international airline.","in a local primary school.","at the Ford car factory.","at the local hospital.","in a city law firm."]),
+          Q("He is a nurse ...","at the local hospital.",["for The Times newspaper.","with an international airline.","in a local primary school.","at the Ford car factory.","at the local hospital.","in a city law firm."]),
+          Q("He is a teacher ...","in a local primary school.",["for The Times newspaper.","with an international airline.","in a local primary school.","at the Ford car factory.","at the local hospital.","in a city law firm."]),
+          Q("She is a pilot ...","with an international airline.",["for The Times newspaper.","with an international airline.","in a local primary school.","at the Ford car factory.","at the local hospital.","in a city law firm."])
+        ]),
+        EX("G. Phrasal verbs", "Choose the correct particle.", [
+          Q("I never got ___ with my boss.","on",["on","up"]),
+          Q("I had to stay ___ until Andy came home.","up",["out","up"]),
+          Q("I sorted ___ the papers on my desk.","out",["up","out"])
+        ])
+      ]
+    };
+
+    const storageKey = "outcomes-unit-01-jobs-vocabulary-v1";
+    const state = loadState();
+    const filters = {1:"all",2:"all",3:"all"};
+    const orders = {};
+
+    function loadState(){
+      try{
+        const saved = JSON.parse(localStorage.getItem(storageKey));
+        return saved && typeof saved === "object"
+          ? {known:saved.known||{},answers:saved.answers||{},correct:saved.correct||{},flipped:saved.flipped||{}}
+          : {known:{},answers:{},correct:{},flipped:{}};
+      }catch(_){
+        return {known:{},answers:{},correct:{},flipped:{}};
+      }
+    }
+
+    function saveState(){
+      localStorage.setItem(storageKey,JSON.stringify(state));
+      updateProgress();
+    }
+
+    function cardId(range,index){return `r${range}-c${index}`}
+    function questionId(range,exercise,item){return `r${range}-e${exercise}-q${item}`}
+    function escapeHtml(value){
+      return String(value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+    }
+    function normalise(value){
+      return String(value||"")
+        .toLowerCase()
+        .replace(/[’‘]/g,"'")
+        .replace(/[.,!?;:()[\]]/g,"")
+        .replace(/\s+/g," ")
+        .trim();
+    }
+    function isCorrect(value,answers){
+      const got=normalise(value);
+      return answers.some(answer=>normalise(answer)===got);
+    }
+    function shuffledIndices(length){
+      const arr=Array.from({length},(_,i)=>i);
+      for(let i=arr.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1));
+        [arr[i],arr[j]]=[arr[j],arr[i]];
+      }
+      return arr;
+    }
+
+    function renderCards(range){
+      const container=document.getElementById(`cards-${range}`);
+      const words=ranges[range];
+      if(!orders[range]) orders[range]=Array.from({length:words.length},(_,i)=>i);
+      const filtered=orders[range].filter(index=>{
+        const known=!!state.known[cardId(range,index)];
+        return filters[range]==="all"||(filters[range]==="known"&&known)||(filters[range]==="learning"&&!known);
+      });
+      if(!filtered.length){
+        container.innerHTML='<div class="empty-state">No cards in this filter.</div>';
+      }else{
+        container.innerHTML=filtered.map(index=>{
+          const word=words[index];
+          const id=cardId(range,index);
+          const known=!!state.known[id];
+          const flipped=!!state.flipped[id];
+          return `
+            <article class="flashcard ${known?"known":""} ${flipped?"flipped":""}" data-card-id="${id}">
+              <button type="button" class="card-main" data-flip-card="${id}" aria-label="Flip ${escapeHtml(word.ru)}">
+                <span class="front">
+                  <span class="card-label">Russian - say it in English</span>
+                  <span class="front-word">${escapeHtml(word.ru)}</span>
+                </span>
+                <span class="back">
+                  <span class="card-label">English</span>
+                  <span class="english">${escapeHtml(word.en)}</span>
+                  <span class="ipa">${escapeHtml(word.ipa)}</span>
+                  <span class="pos">${escapeHtml(word.pos)}</span>
+                </span>
+              </button>
+              <div class="card-footer">
+                <button type="button" class="speak" data-speak="${escapeHtml(word.en)}" aria-label="Play pronunciation of ${escapeHtml(word.en)}">&#9654;</button>
+                <label class="know-label"><input type="checkbox" data-known="${id}" ${known?"checked":""}> I know</label>
+              </div>
+            </article>`;
+        }).join("");
+      }
+      const knownCount=words.filter((_,index)=>state.known[cardId(range,index)]).length;
+      document.getElementById(`counter-${range}`).textContent=`${knownCount}/${words.length} known`;
+    }
+
+    function renderExercises(range){
+      const container=document.getElementById(`exercises-${range}`);
+      container.innerHTML=exercises[range].map((exercise,exIndex)=>{
+        const rows=exercise.items.map((item,itemIndex)=>{
+          const id=questionId(range,exIndex,itemIndex);
+          const value=state.answers[id]||"";
+          const marked=state.correct[id]===true?"correct":state.correct[id]===false?"incorrect":"";
+          let control;
+          if(item.options){
+            const options=['<option value="">Choose...</option>'].concat(item.options.map(option=>
+              `<option value="${escapeHtml(option)}" ${value===option?"selected":""}>${escapeHtml(option)}</option>`
+            ));
+            control=`<select data-answer-id="${id}" aria-label="Answer ${itemIndex+1}">${options.join("")}</select>`;
+          }else{
+            control=`<input type="text" value="${escapeHtml(value)}" data-answer-id="${id}" autocomplete="off" spellcheck="false" aria-label="Answer ${itemIndex+1}">`;
+          }
+          const feedback=marked==="correct"?"Correct":marked==="incorrect"?`Answer: ${escapeHtml(item.answer[0])}`:"";
+          return `
+            <div class="q-row">
+              <div class="q-num">${itemIndex+1}</div>
+              <div class="prompt">${item.prompt}</div>
+              <div class="answer-wrap ${marked}" data-wrap="${id}">
+                ${control}
+                <div class="item-feedback">${feedback}</div>
+              </div>
+            </div>`;
+        }).join("");
+        const bank=exercise.bank.length?`<div class="word-bank">${exercise.bank.map(word=>`<span>${escapeHtml(word)}</span>`).join("")}</div>`:"";
+        const correct=exercise.items.filter((_,itemIndex)=>state.correct[questionId(range,exIndex,itemIndex)]===true).length;
+        return `
+          <div class="exercise" data-exercise="${range}-${exIndex}">
+            <h4>${escapeHtml(exercise.title)}</h4>
+            <p class="instruction">${escapeHtml(exercise.instruction)}</p>
+            ${bank}
+            ${rows}
+            <div class="exercise-actions">
+              <button type="button" class="action-btn" data-check="${range}-${exIndex}">Check</button>
+              <button type="button" class="action-btn secondary" data-show="${range}-${exIndex}">Show answers</button>
+              <button type="button" class="action-btn secondary" data-reset-ex="${range}-${exIndex}">Reset</button>
+              <span class="score" data-score="${range}-${exIndex}">${correct}/${exercise.items.length} correct</span>
+            </div>
+          </div>`;
+      }).join("");
+      updateExerciseCounter(range);
+    }
+
+    function updateExerciseCounter(range){
+      let total=0,correct=0;
+      exercises[range].forEach((exercise,exIndex)=>{
+        exercise.items.forEach((_,itemIndex)=>{
+          total++;
+          if(state.correct[questionId(range,exIndex,itemIndex)]===true) correct++;
+        });
+      });
+      document.getElementById(`exercise-counter-${range}`).textContent=`${correct}/${total} correct`;
+    }
+
+    function markExercise(range,exIndex,showAnswers=false){
+      const exercise=exercises[range][exIndex];
+      exercise.items.forEach((item,itemIndex)=>{
+        const id=questionId(range,exIndex,itemIndex);
+        const control=document.querySelector(`[data-answer-id="${id}"]`);
+        if(showAnswers){
+          control.value=item.answer[0];
+          state.answers[id]=item.answer[0];
+        }
+        const okay=isCorrect(control.value,item.answer);
+        state.correct[id]=okay;
+        const wrap=document.querySelector(`[data-wrap="${id}"]`);
+        wrap.classList.toggle("correct",okay);
+        wrap.classList.toggle("incorrect",!okay);
+        wrap.querySelector(".item-feedback").textContent=okay?"Correct":`Answer: ${item.answer[0]}`;
+      });
+      updateExerciseScore(range,exIndex);
+      updateExerciseCounter(range);
+      saveState();
+    }
+
+    function updateExerciseScore(range,exIndex){
+      const exercise=exercises[range][exIndex];
+      const correct=exercise.items.filter((_,itemIndex)=>state.correct[questionId(range,exIndex,itemIndex)]===true).length;
+      const el=document.querySelector(`[data-score="${range}-${exIndex}"]`);
+      if(el) el.textContent=`${correct}/${exercise.items.length} correct`;
+    }
+
+    function resetExercise(range,exIndex){
+      exercises[range][exIndex].items.forEach((_,itemIndex)=>{
+        const id=questionId(range,exIndex,itemIndex);
+        delete state.answers[id];
+        delete state.correct[id];
+      });
+      renderExercises(range);
+      saveState();
+    }
+
+    function speak(text){
+      if(!("speechSynthesis" in window)){
+        alert("Speech is not supported in this browser.");
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utterance=new SpeechSynthesisUtterance(text);
+      utterance.lang="en-GB";
+      utterance.rate=.82;
+      const voices=window.speechSynthesis.getVoices();
+      const british=voices.find(voice=>/^en-GB/i.test(voice.lang));
+      if(british) utterance.voice=british;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function updateProgress(){
+      const totalCards=Object.values(ranges).reduce((sum,words)=>sum+words.length,0);
+      const knownCards=Object.entries(ranges).reduce((sum,[range,words])=>
+        sum+words.filter((_,index)=>state.known[cardId(range,index)]).length,0);
+      let totalQuestions=0,correctQuestions=0;
+      Object.entries(exercises).forEach(([range,sets])=>{
+        sets.forEach((exercise,exIndex)=>{
+          exercise.items.forEach((_,itemIndex)=>{
+            totalQuestions++;
+            if(state.correct[questionId(range,exIndex,itemIndex)]===true) correctQuestions++;
+          });
+        });
+      });
+      const total=totalCards+totalQuestions;
+      const done=knownCards+correctQuestions;
+      const percent=total?Math.round(done/total*100):0;
+      document.getElementById("progressText").textContent=`${percent}% · ${knownCards}/${totalCards} words · ${correctQuestions}/${totalQuestions} answers`;
+      document.getElementById("progressFill").style.width=`${percent}%`;
+    }
+
+    document.addEventListener("click",event=>{
+      const flip=event.target.closest("[data-flip-card]");
+      if(flip){
+        const id=flip.dataset.flipCard;
+        state.flipped[id]=!state.flipped[id];
+        flip.closest(".flashcard").classList.toggle("flipped",state.flipped[id]);
+        saveState();
+        return;
+      }
+      const audio=event.target.closest("[data-speak]");
+      if(audio){
+        speak(audio.dataset.speak);
+        return;
+      }
+      const filter=event.target.closest("[data-filter]");
+      if(filter){
+        const toolbar=filter.closest("[data-range-tools]");
+        const range=toolbar.dataset.rangeTools;
+        filters[range]=filter.dataset.filter;
+        toolbar.querySelectorAll("[data-filter]").forEach(btn=>btn.classList.toggle("active",btn===filter));
+        renderCards(range);
+        return;
+      }
+      const shuffle=event.target.closest("[data-shuffle]");
+      if(shuffle){
+        const range=shuffle.dataset.shuffle;
+        orders[range]=shuffledIndices(ranges[range].length);
+        renderCards(range);
+        return;
+      }
+      const check=event.target.closest("[data-check]");
+      if(check){
+        const [range,exIndex]=check.dataset.check.split("-").map(Number);
+        markExercise(range,exIndex,false);
+        return;
+      }
+      const show=event.target.closest("[data-show]");
+      if(show){
+        const [range,exIndex]=show.dataset.show.split("-").map(Number);
+        markExercise(range,exIndex,true);
+        return;
+      }
+      const reset=event.target.closest("[data-reset-ex]");
+      if(reset){
+        const [range,exIndex]=reset.dataset.resetEx.split("-").map(Number);
+        resetExercise(range,exIndex);
+      }
+    });
+
+    document.addEventListener("change",event=>{
+      if(event.target.matches("[data-known]")){
+        const id=event.target.dataset.known;
+        state.known[id]=event.target.checked;
+        const range=Number(id.match(/^r(\d+)/)[1]);
+        renderCards(range);
+        saveState();
+        return;
+      }
+      if(event.target.matches("[data-answer-id]")){
+        const id=event.target.dataset.answerId;
+        state.answers[id]=event.target.value;
+        delete state.correct[id];
+        const wrap=document.querySelector(`[data-wrap="${id}"]`);
+        wrap.classList.remove("correct","incorrect");
+        wrap.querySelector(".item-feedback").textContent="";
+        saveState();
+      }
+    });
+
+    document.addEventListener("input",event=>{
+      if(event.target.matches("[data-answer-id]")){
+        const id=event.target.dataset.answerId;
+        state.answers[id]=event.target.value;
+        delete state.correct[id];
+        const wrap=document.querySelector(`[data-wrap="${id}"]`);
+        wrap.classList.remove("correct","incorrect");
+        wrap.querySelector(".item-feedback").textContent="";
+        saveState();
+      }
+    });
+
+    document.getElementById("flipVisible").addEventListener("click",()=>{
+      document.querySelectorAll(".flashcard").forEach(card=>{
+        const id=card.dataset.cardId;
+        state.flipped[id]=!card.classList.contains("flipped");
+      });
+      [1,2,3].forEach(renderCards);
+      saveState();
+    });
+
+    document.getElementById("resetAll").addEventListener("click",()=>{
+      if(!confirm("Reset all flashcards and exercise progress for this vocabulary file?")) return;
+      state.known={};
+      state.answers={};
+      state.correct={};
+      state.flipped={};
+      [1,2,3].forEach(renderCards);
+      [1,2,3,4].forEach(renderExercises);
+      saveState();
+    });
+
+    [1,2,3].forEach(renderCards);
+    [1,2,3,4].forEach(renderExercises);
+    updateProgress();
+    if("speechSynthesis" in window) window.speechSynthesis.getVoices();
+  </script>
+</body>
+</html>
